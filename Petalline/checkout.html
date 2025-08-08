@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pettaline - Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <!-------------------------------------------------HEADER-------------------------------------------------------->
+
+    <header class="navbar">
+        <div class="homelogo">
+        <img src="/Assests/logo2.png" alt="Flower Shop Logo">
+        </div>
+
+        <div class="nav-cart-wrapper">
+            <nav class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/product.html">Shop</a>
+                <a href="/services.html">Services</a>
+                <a href="/aboutus.html">About</a>
+                <a href="/contactus.html">Contact</a>
+            </nav>
+            <div class="homecartlogo">
+                <a href="/cart.html"><img src="/Assests/cart.jpg" alt="Cart"></a>
+            </div>
+            <div class="homeprofileicon">
+                <a href="/sign.html"><img src="/Assests/profile.png" alt="Profile"></a>
+            </div>
+        </div>
+    </header>
+
+    <!-------------------------------------------------MAIN CHECKOUT CONTENT---------------------------------------------------------->
+    
+    <div class="container">
+        <div class="header">
+            <h1>Secure Checkout</h1>
+            <p>Complete your order with our secure payment system</p>
+        </div>
+
+        <!-- Checkout Progress Bar -->
+        <div class="checkout-progress">
+            <div class="progress-step completed">
+                <div class="step-number">1</div>
+                <span class="step-label">Cart</span>
+            </div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step active">
+                <div class="step-number">2</div>
+                <span class="step-label">Checkout</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <span class="step-label">Confirmation</span>
+            </div>
+        </div>
+
+        <div class="checkout-section">
+            <!-- Checkout Form -->
+            <div class="checkout-form-container">
+                <form class="checkout-form" id="checkoutForm">
+                    <!-- Contact Information -->
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-user"></i> Contact Information</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group half">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                        </div>
+                    </div>
+
+                    <!-- Delivery Information -->
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-truck"></i> Delivery Information</h3>
+                        </div>
+                        
+                        <!-- Delivery Options -->
+                        <div class="delivery-options">
+                            <div class="delivery-option">
+                                <input type="radio" id="homeDelivery" name="deliveryType" value="home" checked>
+                                <label for="homeDelivery" class="delivery-label">
+                                    <div class="delivery-info">
+                                        <div class="delivery-title">
+                                            <i class="fas fa-home"></i>
+                                            Home Delivery
+                                        </div>
+                                        <div class="delivery-desc">Delivered to your doorstep</div>
+                                        <div class="delivery-price">Free (orders over $100)</div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="delivery-option">
+                                <input type="radio" id="storePickup" name="deliveryType" value="pickup">
+                                <label for="storePickup" class="delivery-label">
+                                    <div class="delivery-info">
+                                        <div class="delivery-title">
+                                            <i class="fas fa-store"></i>
+                                            Store Pickup
+                                        </div>
+                                        <div class="delivery-desc">Pick up from our store</div>
+                                        <div class="delivery-price">Free</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Address -->
+                        <div class="delivery-address-section" id="deliveryAddressSection">
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" required placeholder="123 Main Street">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required placeholder="New York">
+                                </div>
+                                <div class="form-group quarter">
+                                    <label for="state">State *</label>
+                                    <select id="state" name="state" required>
+                                        <option value="">Select State</option>
+                                                <option value="NY">Lahore</option>
+                                                <option value="CA">Islamabad</option>
+                                                <option value="TX">Karachi</option>
+                                                <option value="FL">Gilgit Baltistan</option>
+                                                <option value="NY">Faisalabad</option>
+                                                <option value="CA">Gujrat</option>
+                                                <option value="TX">Rawalpindi</option>
+                                                <option value="FL">Azad Kashmir</option>
+                                        <!-- Add more states as needed -->
+                                    </select>
+                                </div>
+                                <div class="form-group quarter">
+                                    <label for="zipCode">ZIP Code *</label>
+                                    <input type="text" id="zipCode" name="zipCode" required placeholder="10001">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryInstructions">Delivery Instructions (Optional)</label>
+                                <textarea id="deliveryInstructions" name="deliveryInstructions" placeholder="Leave at front door, ring doorbell, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Date & Time -->
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="deliveryDate">Preferred Delivery Date *</label>
+                                <input type="date" id="deliveryDate" name="deliveryDate" required>
+                            </div>
+                            <div class="form-group half">
+                                <label for="deliveryTime">Preferred Time Slot *</label>
+                                <select id="deliveryTime" name="deliveryTime" required>
+                                    <option value="">Select Time</option>
+                                    <option value="9-12">9:00 AM - 12:00 PM</option>
+                                    <option value="12-15">12:00 PM - 3:00 PM</option>
+                                    <option value="15-18">3:00 PM - 6:00 PM</option>
+                                    <option value="18-21">6:00 PM - 9:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gift Message -->
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-gift"></i> Gift Message (Optional)</h3>
+                        </div>
+                        <div class="gift-options">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="isGift" name="isGift">
+                                <label for="isGift">This is a gift</label>
+                            </div>
+                        </div>
+                        <div class="gift-message-section" id="giftMessageSection" style="display: none;">
+                            <div class="form-group">
+                                <label for="giftMessage">Gift Message</label>
+                                <textarea id="giftMessage" name="giftMessage" placeholder="Write your heartfelt message here..." maxlength="250"></textarea>
+                                <div class="character-count">
+                                    <span id="giftMessageCount">0</span>/250 characters
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="giftFrom">From</label>
+                                    <input type="text" id="giftFrom" name="giftFrom" placeholder="Your name">
+                                </div>
+                                <div class="form-group half">
+                                    <label for="giftTo">To</label>
+                                    <input type="text" id="giftTo" name="giftTo" placeholder="Recipient's name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-credit-card"></i> Payment Information</h3>
+                        </div>
+                        
+                        <!-- Payment Methods -->
+                        <div class="payment-methods-section">
+                            <div class="payment-method">
+                                <input type="radio" id="creditCard" name="paymentMethod" value="card" checked>
+                                <label for="creditCard" class="payment-label">
+                                    <div class="payment-info">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Credit/Debit Card</span>
+                                        <div class="accepted-cards">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <i class="fab fa-cc-amex"></i>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                <label for="paypal" class="payment-label">
+                                    <div class="payment-info">
+                                        <i class="fab fa-paypal"></i>
+                                        <span>PayPal</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" id="applePay" name="paymentMethod" value="apple">
+                                <label for="applePay" class="payment-label">
+                                    <div class="payment-info">
+                                        <i class="fab fa-apple-pay"></i>
+                                        <span>Apple Pay</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Card Details -->
+                        <div class="card-details-section" id="cardDetailsSection">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number *</label>
+                                <input type="text" id="cardNumber" name="cardNumber" required placeholder="1234 5678 9012 3456" maxlength="19">
+                                <div class="card-type-icon" id="cardTypeIcon"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="expiryDate">Expiry Date *</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" required placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group half">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" name="cvv" required placeholder="123" maxlength="4">
+                                    <div class="cvv-info">
+                                        <i class="fas fa-question-circle" title="3 digits on the back of your card (4 for Amex)"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardName">Name on Card *</label>
+                                <input type="text" id="cardName" name="cardName" required placeholder="John Doe">
+                            </div>
+                            
+                            <!-- Billing Address -->
+                            <div class="billing-address-section">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="sameAsDelivery" name="sameAsDelivery" checked>
+                                    <label for="sameAsDelivery">Billing address same as delivery address</label>
+                                </div>
+                                
+                                <div class="billing-address-form" id="billingAddressForm" style="display: none;">
+                                    <h4>Billing Address</h4>
+                                    <div class="form-group">
+                                        <label for="billingAddress">Street Address *</label>
+                                        <input type="text" id="billingAddress" name="billingAddress" placeholder="123 Billing Street">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group half">
+                                            <label for="billingCity">City *</label>
+                                            <input type="text" id="billingCity" name="billingCity" placeholder="Billing City">
+                                        </div>
+                                        <div class="form-group quarter">
+                                            <label for="billingState">State *</label>
+                                            <select id="billingState" name="billingState">
+                                                <option value="">Select State</option>
+                                                <option value="NY">Lahore</option>
+                                                <option value="CA">Islamabad</option>
+                                                <option value="TX">Karachi</option>
+                                                <option value="FL">Gilgit Baltistan</option>
+                                                <option value="NY">Faisalabad</option>
+                                                <option value="CA">Gujrat</option>
+                                                <option value="TX">Rawalpindi</option>
+                                                <option value="FL">Azad Kashmir</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group quarter">
+                                            <label for="billingZip">ZIP Code *</label>
+                                            <input type="text" id="billingZip" name="billingZip" placeholder="10001">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="form-section">
+                        <div class="terms-section">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                                <label for="termsAccepted">
+                                    I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a> *
+                                </label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">
+                                    Subscribe to our newsletter for special offers and updates
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Summary Sidebar -->
+            <div class="order-summary-sidebar">
+                <div class="order-summary">
+                    <div class="summary-header">
+                        <h3>Order Summary</h3>
+                    </div>
+                    
+                    <!-- Order Items -->
+                    <div class="order-items">
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="./Assests/products/1.jpg" alt="Dreamy Blue & White Bouquet">
+                            </div>
+                            <div class="item-details">
+                                <h4>Dreamy Blue & White Bouquet</h4>
+                                <div class="item-quantity">Qty: 2</div>
+                                <div class="item-price">$179.98</div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="./Assests/products/13.jpg" alt="Rainbow Rose Celebration">
+                            </div>
+                            <div class="item-details">
+                                <h4>Rainbow Rose Celebration</h4>
+                                <div class="item-quantity">Qty: 1</div>
+                                <div class="item-price">$129.99</div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="./Assests/products/29.jpg" alt="Pure White Rose Bouquet">
+                            </div>
+                            <div class="item-details">
+                                <h4>Pure White Rose Bouquet</h4>
+                                <div class="item-quantity">Qty: 1</div>
+                                <div class="item-price">$114.99</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-details">
+                        <div class="summary-line">
+                            <span>Subtotal (3 items)</span>
+                            <span class="summary-price">$424.96</span>
+                        </div>
+                        
+                        <div class="summary-line discount-line">
+                            <span>Discount</span>
+                            <span class="summary-price discount-amount">-$58.95</span>
+                        </div>
+                        
+                        <div class="summary-line">
+                            <span>Delivery</span>
+                            <span class="summary-price" id="deliveryPrice">Free</span>
+                        </div>
+                        
+                        <div class="summary-line">
+                            <span>Tax</span>
+                            <span class="summary-price">$29.28</span>
+                        </div>
+                        
+                        <hr class="summary-divider">
+                        
+                        <div class="summary-line total-line">
+                            <span>Total</span>
+                            <span class="summary-price total-price">$395.29</span>
+                        </div>
+                    </div>
+
+                    <!-- Security Features -->
+                    <div class="security-features">
+                        <div class="security-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>SSL Encrypted</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-undo"></i>
+                            <span>Money Back Guarantee</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="checkout-actions">
+                        <button type="submit" form="checkoutForm" class="place-order-btn">
+                            <i class="fas fa-lock"></i>
+                            Place Order
+                        </button>
+                        
+                        <a href="/cart.html" class="back-to-cart-btn">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Processing Modal -->
+    <div class="order-modal" id="orderProcessingModal" style="display: none;">
+        <div class="order-modal-content">
+            <div class="processing-animation">
+                <div class="spinner"></div>
+                <h3>Processing Your Order</h3>
+                <p>Please wait while we process your payment...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="order-modal" id="orderSuccessModal" style="display: none;">
+        <div class="order-modal-content">
+            <div class="success-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Order Placed Successfully!</h3>
+                <p>Thank you for your order. You will receive a confirmation email shortly.</p>
+                <div class="order-number">
+                    Order #<span id="orderNumber">FL-2025-001234</span>
+                </div>
+                <div class="success-actions">
+                    <a href="/index.html" class="btn-primary">Continue Shopping</a>
+                    <!-- <a href="/Orders.html" class="btn-secondary">View Order Details</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------FOOTER--------------------------------------------------------->
+    
+    <footer class="footer">
+        <div class="footer-left">
+            <h1 class="footer-title">Petalline</h1>
+
+            <div class="subscribe">
+                <input type="email" placeholder="Email Address">
+                <button>Send</button>
+            </div>
+
+            <p class="copyright">© 2025 Petalline, All Rights Reserved</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="link-group">
+                <h3>About</h3>
+                <a href="/aboutus.html">About Us</a>
+                <a href="/product.html">Our Products</a>
+                <a href="/services.html">Our Services</a>
+            </div>
+
+            <div class="link-group">
+                <h3>Contact</h3>
+                <a href="/contactus.html">Contact Us</a>
+                <a href="/services.html">FAQ Page</a>
+                <a href="/aboutus.html">About Me</a>
+            </div>
+
+            <div class="link-group">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="/Assests/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="/Assests/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="/Assests/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="/Assests/linkedin.svg" alt="LinkedIn">
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTop">Back to top</a>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

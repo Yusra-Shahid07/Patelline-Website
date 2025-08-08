@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petalline - Authentication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <!-------------------------------------------------HEADER-------------------------------------------------------->
+
+    <header class="navbar">
+        <div class="homelogo">
+        <img src="/Assests/logo2.png" alt="Flower Shop Logo">
+        </div>
+
+        <div class="nav-cart-wrapper">
+            <nav class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/product.html">Shop</a>
+                <a href="/aboutus.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/contactus.html">Contact</a>
+                <!-- <a href="#">Log Out</a> -->
+            </nav>
+            <div class="homecartlogo">
+                <a href="/cart.html"><img src="/Assests/cart.jpg" alt="Cart"></a>
+            </div>
+            <div class="homeprofileicon">
+                <a href="/sign.html"><img src="/Assests/profile.png" alt="Profile"></a>
+            </div>
+        </div>
+    </header>
+
+
+  <!-------------------------------------------------MAIN---------------------------------------------------------->
+
+    <!-- User Status Display (Hidden but functional) -->
+    <div id="userStatus" class="user-status hidden" style="display: none !important;">
+        <strong>User Database Status:</strong><br>
+        <span id="userCount">0 users registered</span><br>
+        <span id="currentUser">Not logged in</span>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="wrapper">
+            <div class="form-wrapper">
+                <div class="form-container">
+                    <!-- SIGN IN FORM -->
+                    <form id="signInForm">
+                        <h2>Sign In</h2>
+                        <div class="input-group">
+                            <input type="text" id="loginUsername" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="loginPassword" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember">
+                            <label><input type="checkbox" id="rememberMe"> Remember me</label>
+                        </div>
+                        <button type="submit">Sign In</button>
+                        <button type="button" class="toggle-btn" onclick="toggleToSignUp()">Don't have an account? Sign Up</button>
+                    </form>
+
+                    <!-- SIGN UP FORM -->
+                    <form id="signUpForm" class="hidden">
+                        <h2>Sign Up</h2>
+                        <div class="input-group">
+                            <input type="text" id="fullName" required>
+                            <label>Full Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label>Email Address</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="confirmPassword" required>
+                            <label>Confirm Password</label>
+                        </div>
+                        <div class="remember">
+                            <label><input type="checkbox" id="agreeTerms" required> I agree to the terms & conditions</label>
+                        </div>
+                        <button type="submit">Create Account</button>
+                        <button type="button" class="toggle-btn" onclick="toggleToSignIn()">Already have an account? Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!------------------------------------------------FOOTER--------------------------------------------------------->
+    
+    <footer class="footer">
+        <div class="footer-left">
+            <h1 class="footer-title">Petalline</h1>
+
+            <div class="subscribe">
+                <input type="email" placeholder="Email Address">
+                <button>Send</button>
+            </div>
+
+            <p class="copyright">© 2025 Petalline, All Rights Reserved</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="link-group">
+                <h3>About</h3>
+                <a href="/aboutus.html">About Us</a>
+                <a href="/product.html">Our Products</a>
+                <a href="/services.html">Our Services</a>
+            </div>
+
+            <div class="link-group">
+                <h3>Contact</h3>
+                <a href="#">Contact Us</a>
+                <a href="/services.html">FAQ Page</a>
+                <a href="/aboutus.html">About Me</a>
+            </div>
+
+            <div class="link-group">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="Assests/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="Assests/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="Assests/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="Assests/linkedin.svg" alt="LinkedIn">
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTop">Back to top</a>
+        </div>
+    </footer>
+
+
+    <script src="sign.js"></script>
+</body>
+</html>

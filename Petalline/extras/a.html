@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pettaline - Home</title>
+    <link rel="stylesheet" href="a.css"/>
+</head>
+<body>
+
+    <!-------------------------------------------------HEADER-------------------------------------------------------->
+
+    <header class="navbar">
+        <div class="homelogo">
+        <img src="/Assests/logo2.png" alt="Flower Shop Logo">
+        </div>
+
+        <div class="nav-cart-wrapper">
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="/product.html">Shop</a>
+                <a href="/aboutus.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/contactus.html">Contact</a>
+                <!-- <a href="#">Log Out</a> -->
+            </nav>
+            <div class="homecartlogo">
+                <a href="/cart.html"><img src="/Assests/cart.jpg" alt="Cart"></a>
+            </div>
+            <div class="homeprofileicon">
+                <a href="/sign.html"><img src="/Assests/profile.png" alt="Profile"></a>
+            </div>
+        </div>
+    </header>
+
+
+  <!-------------------------------------------------MAIN---------------------------------------------------------->
+  
+    <main class="mainofhome">
+
+        <div class="imagemain"><img src="/Assests/home/home main 2.jpg"></div>
+        <!-- Main Header Text -->
+        <div id="maintext">
+            "Welcome to Empathy
+            Where <br>Flowers Speak the Language <br>of the Heart"
+        </div>
+
+        <!-- About Us Section -->
+        <div class="video">
+            <div class="videosidetext">
+                <div class="side-text">
+                    <p class="sidetextaboveheading">ABOUT US</p>
+                    <div class="aboutuscontent">
+                        Let nature's beauty express what words often can't.
+                        At Empathy, every petal is a message — of love, care, comfort, or joy.
+                        We believe flowers are not just decoration; they are emotions in bloom.
+                        Whether you're celebrating a moment or comforting a heart,
+                        our handcrafted arrangements speak with sincerity and grace.
+                    </div>
+                </div>
+                <div class="side-video">
+                    <video src="/Assests/home/videoflower.mp4" autoplay muted loop controls></video>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Our Flowers Section -->
+        <div class="homeourwork">
+            <div class="ourflowers">
+                <div class="ourworktext">
+                    <div class="ourflowersheading">OUR FLOWERS</div>
+                    <div class="viewallbutton">VIEW ALL</div>
+                </div>
+
+                <div class="picofflower">
+                    <img class="flower1" src="/Assests/home/2.jpg">
+                </div>
+
+                <div class="sidetextflower1">
+                    <p id="bloomheading">Bloom of Emotions</p>
+                    These handcrafted arrangements are more than just flowers they are heartfelt expressions. 
+                    Featuring pink roses for admiration, yellow roses for friendship, and soft carnations for love, 
+                    this bouquet speaks the unspoken. A perfect gift for every emotion.
+                    <p id="bloom2para">
+                        Each bloom is thoughtfully chosen to represent a unique feeling from the gentle warmth 
+                        of companionship to the deep affection of love. Wrapped in elegant packaging and tied with care, 
+                        Bloom of Emotions is not just a bouquet; it's a beautiful message delivered through nature's 
+                        most delicate creations. Whether it's to celebrate, comfort, or simply show you care, 
+                        let your emotions blossom with every petal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ourflowers">
+                <div class="picofflower">
+                    <img class="flower2" src="/Assests/home/1.png">
+                </div>
+                <div class="sidetextflower1">
+                    <p id="bloomheading">Radiance in Bloom</p>
+                    Bursting with color and emotion, this vibrant bouquet captures the spirit of joy, warmth, and celebration. 
+                    The fiery orange lilies stand for confidence and passion, while yellow roses whisper friendship and cheer. 
+                    Shades of purple and pink bring grace and admiration, with every petal adding its own voice to the harmony 
+                    of the arrangement.
+                    <p id="bloom2para">
+                        Carefully gathered and artfully styled, Radiance in Bloom isn't just a floral display—it's a celebration 
+                        of feelings too deep for words. Whether you're sharing joy or brightening a space, 
+                        let this radiant bouquet do the talking.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Testimonials Section -->
+        <div class="testimonials animate-on-scroll">
+            <div class="testimonials-heading">WHAT OUR CUSTOMERS SAY</div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Empathy truly understands the language of flowers. Their arrangement for my anniversary 
+                        was absolutely perfect and conveyed exactly what I felt in my heart."
+                    </div>
+                    <div class="testimonial-author">- Sarah Johnson</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "The quality and freshness of their flowers is unmatched. Every bouquet tells a story 
+                        and brings so much joy to our home."
+                    </div>
+                    <div class="testimonial-author">- Michael Chen</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Their same-day delivery saved my relationship! The flowers were gorgeous and arrived 
+                        exactly when promised. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">- Emma Rodriguez</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- News Section -->
+        <div class="news">
+            <div class="ournewstext">
+                <div class="newsheading">RECENT NEWS</div>
+                
+                <div class="mainnewsdiv">
+                    <div class="news-item" onclick="toggleExpand(this)">
+                        <div class="newscontent">
+                            <span>7/6/2025</span>
+                            <hr class="smallhr">
+                            <span>Seasonal Blooms to Brighten Your Home</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="news-details">
+                            <h3>Seasonal Blooms to Brighten Your Home</h3>
+                            <p>
+                                Discover the perfect seasonal flowers that can transform your living space into a vibrant oasis. 
+                                From spring tulips to summer sunflowers, learn how to choose the right blooms for each season 
+                                and create stunning arrangements that bring life and color to every corner of your home.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" onclick="toggleExpand(this)">
+                        <div class="newscontent">
+                            <span>8/6/2025</span>
+                            <hr class="smallhr">
+                            <span>Why Roses Are Still the Queen of Bouquets</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="news-details">
+                            <h3>Why Roses Are Still the Queen of Bouquets</h3>
+                            <p>
+                                Explore the timeless elegance of roses and understand why they remain the most popular choice 
+                                for bouquets. From their rich symbolism to their incredible variety of colors and fragrances, 
+                                roses continue to capture hearts and express emotions like no other flower can.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" onclick="toggleExpand(this)">
+                        <div class="newscontent">
+                            <span>9/6/2025</span>
+                            <hr class="smallhr">
+                            <span>The Meaning Behind Flower Colors</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="news-details">
+                            <h3>The Meaning Behind Flower Colors</h3>
+                            <p>
+                                Delve into the fascinating world of flower color symbolism. Learn what red roses truly represent, 
+                                why yellow flowers symbolize friendship, and how purple blooms convey elegance. 
+                                Understanding these meanings will help you choose the perfect flowers for any occasion.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" onclick="toggleExpand(this)">
+                        <div class="newscontent">
+                            <span>10/6/2025</span>
+                            <hr class="smallhr">
+                            <span>Blooming Emotions Through Petals</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="news-details">
+                            <h3>Blooming Emotions Through Petals</h3>
+                            <p>
+                                Discover how flowers can be powerful messengers of emotion. From expressing love and gratitude 
+                                to offering comfort and support, learn how different floral arrangements can convey your deepest 
+                                feelings and create meaningful connections with your loved ones.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" onclick="toggleExpand(this)">
+                        <div class="newscontent">
+                            <span>11/6/2025</span>
+                            <hr class="smallhr">
+                            <span>How to Choose the Right Bouquet</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="news-details">
+                            <h3>How to Choose the Right Bouquet</h3>
+                            <p>
+                                Master the art of selecting the perfect bouquet for any occasion. Consider factors like recipient 
+                                preferences, event type, seasonal availability, and color coordination. Our expert tips will help 
+                                you make choices that create lasting impressions and bring joy to any celebration.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" onclick="toggleExpand(this)">
+                        <div class="newscontent">
+                            <span>12/6/2025</span>
+                            <hr class="smallhr">
+                            <span>Seasonal Blooms and Their Significance</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="news-details">
+                            <h3>Seasonal Blooms and Their Significance</h3>
+                            <p>
+                                Understand the cultural and symbolic significance of seasonal flowers throughout the year. 
+                                From cherry blossoms representing renewal in spring to poinsettias symbolizing celebration 
+                                in winter, explore how different cultures have attributed meaning to nature's beautiful cycles.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="featureproducts">
+            <div class="featuresheader">OUR TOP SELLINGS</div>
+            <div class="featurespicsall">
+                <div class="featuresarrowleft">&lt;</div>
+                <div class="featurespic1"></div>
+                <div class="featurespic2"></div>
+                <div class="featurespic3"></div>
+                <div class="featuresarrowright">&gt;</div>
+            </div>
+        </div>
+           
+
+
+        <!-- Call to Action Section -->
+        <div class="talk">
+            <div class="talkcontent">
+                <div id="talkheading">Let's buy</div>
+                <div class="talktext">
+                    Ready to create<br> floral experiences<br> your heart will cherish?
+                </div>
+                <div class="call" ><a href="/product.html">BUY PRODUCT</a></div>
+            </div>
+        </div>
+    </main>
+
+
+    
+<!------------------------------------------------FOOTER--------------------------------------------------------->
+    
+    <footer class="footer">
+        <div class="footer-left">
+            <h1 class="footer-title">Petalline</h1>
+
+            <div class="subscribe">
+                <input type="email" placeholder="Email Address">
+                <button>Send</button>
+            </div>
+
+            <p class="copyright">© 2025 Petalline, All Rights Reserved</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="link-group">
+                <h3>About</h3>
+                <a href="/aboutus.html">About Us</a>
+                <a href="/product.html">Our Products</a>
+                <a href="/services.html">Our Services</a>
+            </div>
+
+            <div class="link-group">
+                <h3>Contact</h3>
+                <a href="#">Contact Us</a>
+                <a href="/services.html">FAQ Page</a>
+                <a href="/aboutus.html">About Me</a>
+            </div>
+
+            <div class="link-group">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="Assests/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="Assests/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="Assests/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="Assests/linkedin.svg" alt="LinkedIn">
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTop">Back to top</a>
+        </div>
+    </footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

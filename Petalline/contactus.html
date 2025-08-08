@@ -1,0 +1,271 @@
+<!-------------------------------------------TOTALLY DONE PAGE---------------------------------------------------->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pettaline - Contact Us</title>
+    <link rel="stylesheet" href="contactus.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-------------------------------------------------HEADER-------------------------------------------------------->
+
+    <header class="navbar">
+        <div class="homelogo">
+        <img src="/Assests/logo2.png" alt="Flower Shop Logo">
+        </div>
+
+        <div class="nav-cart-wrapper">
+            <nav class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="product.html">Shop</a>
+                <a href="/services.html">Services</a>
+                <a href="/aboutus.html">About</a>
+                <a href="#">Contact</a>
+                <!-- <a href="#">Log Out</a> -->
+            </nav>
+            <div class="homecartlogo">
+                <a href="/cart.html"><img src="/Assests/cart.jpg" alt="Cart"></a>
+            </div>
+            <div class="homeprofileicon">
+                <a href="/sign.html"><img src="/Assests/profile.png" alt="Profile"></a>
+            </div>
+        </div>
+    </header>
+
+
+  <!-------------------------------------------------MAIN---------------------------------------------------------->
+  
+    <!-- Main Contact Section -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Main Contact Form Section -->
+            <section class="contact-form-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2 class="form-title">Get In Touch</h2>
+                        <p class="form-subtitle">Share your contact details and we'll connect with you shortly to discuss your needs</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <!-- Step 1: Personal Information -->
+                        <div class="form-step active" data-step="1">
+                            <div class="step-content">
+                                <h3 class="step-title">Your Information</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="firstName">
+                                            <i class="fas fa-user"></i>
+                                            First Name
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="firstName" 
+                                            name="firstName" 
+                                            class="form-input" 
+                                            placeholder="Enter your first name"
+                                            required
+                                            data-validate="name"
+                                        >
+                                        <div class="input-feedback"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="lastName">
+                                            <i class="fas fa-user"></i>
+                                            Last Name
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="lastName" 
+                                            name="lastName" 
+                                            class="form-input" 
+                                            placeholder="Enter your last name"
+                                            required
+                                            data-validate="name"
+                                        >
+                                        <div class="input-feedback"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">
+                                            <i class="fas fa-envelope"></i>
+                                            Email Address
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input 
+                                            type="email" 
+                                            id="email" 
+                                            name="email" 
+                                            class="form-input" 
+                                            placeholder="your.email@example.com"
+                                            required
+                                            data-validate="email"
+                                        >
+                                        <div class="input-feedback"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="phone">
+                                            <i class="fas fa-phone"></i>
+                                            Phone Number
+                                        </label>
+                                        <input 
+                                            type="tel" 
+                                            id="phone" 
+                                            name="phone" 
+                                            class="form-input" 
+                                            placeholder="+1 (555) 123-4567"
+                                            data-validate="phone"
+                                        >
+                                        <div class="input-feedback"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group full-width">
+                                        <label class="form-label" for="address">
+                                            <i class="fas fa-home"></i>
+                                            Delivery Address (Optional)
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="address" 
+                                            name="address" 
+                                            class="form-input" 
+                                            placeholder="Street address for delivery"
+                                        >
+                                        <div class="input-feedback"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Form Navigation -->
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary prev-btn" disabled>
+                                <i class="fas fa-eraser"></i>
+                                Clear Form
+                            </button>
+                            
+                            <button type="button" class="btn btn-primary next-btn">
+                                Submit Contact Request
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            
+                            <button type="submit" class="btn btn-success submit-btn" style="display: none;">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Request
+                                <div class="btn-loader"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Contact Info Cards -->
+            <section class="contact-info-section">
+                <div class="info-cards">
+                    <div class="info-card" data-animate="fade-up" data-delay="100">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 234-ROSE</p>
+                        <p class="info-detail">Mon-Sat 8AM-7PM EST</p>
+                    </div>
+                    
+                    <div class="info-card" data-animate="fade-up" data-delay="200">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>hello@bloomandblossom.com</p>
+                        <p class="info-detail">We reply within 2 hours</p>
+                    </div>
+                    
+                    <div class="info-card" data-animate="fade-up" data-delay="300">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Our Shop</h3>
+                        <p>456 Garden Boulevard</p>
+                        <p class="info-detail">Flowerdale, CA 90210</p>
+                    </div>
+                    
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+       
+<!------------------------------------------------FOOTER--------------------------------------------------------->
+    
+    <footer class="footer">
+        <div class="footer-left">
+            <h1 class="footer-title">Petalline</h1>
+
+            <div class="subscribe">
+                <input type="email" placeholder="Email Address">
+                <button>Send</button>
+            </div>
+
+            <p class="copyright">© 2025 Petalline, All Rights Reserved</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="link-group">
+                <h3>About</h3>
+                <a href="/aboutus.html">About Us</a>
+                <a href="/product.html">Our Products</a>
+                <a href="/services.html">Our Services</a>
+            </div>
+
+            <div class="link-group">
+                <h3>Contact</h3>
+                <a href="#">Contact Us</a>
+                <a href="/services.html">FAQ Page</a>
+                <a href="/aboutus.html">About Me</a>
+            </div>
+
+            <div class="link-group">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="/Assests/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="/Assests/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="/Assests/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="/Assests/linkedin.svg" alt="LinkedIn">
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTop">Back to top</a>
+        </div>
+    </footer>
+
+
+    <script src="contactus.js"></script>
+</body>
+</html>
